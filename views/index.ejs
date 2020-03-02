@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d09153e81b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Orapma</a>
+          </nav>
+    </header>
+
+    <main>
+        <section class="capa">
+            <div class="capa-titulo">
+                <h1>Fale sem se preocupar</h1>
+            </div>
+            <div class="capa-texto">
+                <p>
+                    Com o novo produto da Orapma, o Fale Mais, você faz ligações entre cidades diferentes sem ter que se preocupar com a conta no final do mês. Escolha o plano que mais combina com você e pague apenas os minutos excedentes.
+                </p>
+                <a role="button" class="btn btn-light capa-texto-btn" href="#calculadora">Faça uma simulação</a>
+            </div>
+        </section>
+        <section class="calculadora" id="calculadora">
+            <div class="calculadora-titulo">
+                <h1>Descubra o tamanho da sua economia</h1>
+            </div>
+            <div class="calculadora-form">
+                <div class="calculadora-form-opcoes">
+                    <form id="form-calculadora">
+                        <div class="form-group">
+                          <label for="ddd-origem">DDD de Origem</label>
+                          <select class="form-control" id="ddd-origem" name="ddd-origem" required>
+                            <option value="011">011 - São Paulo</option>
+                            <option value="016">016 - Ribeirão Preto</option>
+                            <option value="017">017 - São José do Rio Preto</option>
+                            <option value="018">018 - Presidente Prudente</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ddd-destino">DDD de Destino</label>
+                            <select class="form-control" id="ddd-destino" name="ddd-destino" required>
+                              <option value="011" disabled>011 - São Paulo</option>
+                              <option value="016" selected>016 - Ribeirão Preto</option>
+                              <option value="017">017 - São José do Rio Preto</option>
+                              <option value="018">018 - Presidente Prudente</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="plano">Plano</label>
+                            <select class="form-control" id="plano" name="plano" required>
+                              <option value="30">Fale Mais 30</option>
+                              <option value="60">Fale Mais 60</option>
+                              <option value="120">Fale Mais 120</option>
+                            </select>
+                          </div>
+                        <div class="form-group">
+                            <label for="minutos">Minutos</label>
+                            <input type="number" class="form-control" id="minutos" name="minutos" required min="0">
+                        </div>
+                        <div class="btn-submit text-center">
+                            <button type="submit" class="btn btn-primary calculadora-form-opcoes-btn text-center">Calcular Valor</button>
+                        </div>
+                        </div>
+                      </form>
+
+                      <div class="calculadora-form-valores">
+                          <div class="card-valores">
+                                <div class="card-plano">
+                                    Plano Fale Mais <span id="plano"></span>
+                                </div>
+                                <div class="card-valor">
+                                    Com Fale Mais: <span id="valor-plano"></span><br>
+                                    Sem Fale Mais: <span id="valor-sem-plano"></span>
+                                </div>
+                                <div class="card-lista">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-phone"></i>
+                                            <span id="minutos"></span> minutos grátis
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-coins"></i>
+                                            <span id="economia"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+        </section>
+    </main>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
